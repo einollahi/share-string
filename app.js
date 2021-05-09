@@ -17,7 +17,7 @@ app.use(function (req, res, next) {
 
 app.use(express.static(path.join(__dirname, 'client')));
 
-const server = app.listen(3000, () => {
+const server = app.listen(process.env.PORT || 3000, () => {
 	console.log('server is listenning in port 3000');
 });
 
